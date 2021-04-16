@@ -7,19 +7,13 @@ import base64
 import json
 
 
-'''
-作者：pk哥
-文章首发公众号：Python知识圈，欢迎关注
-完成日期：2020/03/02
-如疑问或需转载，请加我微信留言，备注来意，谢谢。
-'''
 
 header = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:69.0) Gecko/20100101 Firefox/69.0'
         }
 def get_access_token():
-    client_id = '' #API Key
-    client_secret = '' #Secret Key
+    client_id = 'b4kaQ49cYzGIzvWhMW9rVGDL' #API Key
+    client_secret = 'MiQV26ULhcwL6gGXWf8nqF6wfluGcmd5' #Secret Key
     url='https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&' \
         'client_id={0}&client_secret={1}'.format(client_id,client_secret)
     data=requests.get(url, headers=header)
